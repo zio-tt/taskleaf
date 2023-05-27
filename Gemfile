@@ -65,3 +65,4 @@ gem 'loofah', '~> 2.19.1'
 
 gem 'slim-rails', '3.1.3'
 gem 'html2slim'
+gem 'bootstrap', '~> 4.6'
