@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'loofah', '~> 2.19.1'
+
+gem 'slim-rails', '3.1.3'
+gem 'html2slim'
