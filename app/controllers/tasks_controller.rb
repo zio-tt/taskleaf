@@ -22,11 +22,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    # task_paramsメソッドで安全化されたtaskパラメータを取得する
-    task = Task.new(task_params)
-    # save!メソッドはsaveメソッドと違い失敗した時に例外を返す（saveはfalseを返す）
-    task.save!
-    redirect_to tasks_url, notice: "タスク「#{task.name}」を登録しました。"
+    @task = Task.new(task_params)
+
+    if @task.save
+      redirect_to @task, notice: "タスク「#{task.name}」を登録しました。"
+    else
+      render :new
+    end
   end
 
 def destroy
